@@ -1,5 +1,5 @@
- # AMMAR: 
- Autonomous Mobility and Multi-Agent Research
+
+ ## AMMAR (Autonomous Mobility and Multi-Agent Research)
 
 
 # CAL-RAPPO
