@@ -1,4 +1,5 @@
- Welcome to AMMAR: Autonomous Mobility and Multi-Agent Research
+ # AMMAR: 
+ Autonomous Mobility and Multi-Agent Research
 
 
 # CAL-RAPPO
@@ -11,6 +12,8 @@ source code: https://github.com/L221119/CAL)
 IST_SACF is a CARLA-based visual reinforcement learning project for safe car-following. The project focuses on single-lane longitudinal car-following. It uses front-view camera images as the main observation input and trains an agent through frame stacking, image augmentation, experience replay, and a contrastive learning auxiliary objective, enabling the agent to learn a stable time-headway control policy while maintaining safety.
 
  source code https://github.com/howbani/IST-SACF
+
+ 
 
 
 
