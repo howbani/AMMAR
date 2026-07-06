@@ -1,6 +1,9 @@
 
  ## AMMAR (Autonomous Mobility & Multi-Agent Research)
 
+# LaneAnchor
+source code https://github.com/18haventgirl/LaneAnchor
+
 
 # CAL-RAPPO
 CAL-RAPPO is a vision-based deep reinforcement learning project built on the CARLA simulator, designed to enable autonomous driving at unsignalized intersections under adverse weather conditions. The project focuses on end-to-end decision-making in such challenging scenarios. It leverages forward-facing camera images and ego-vehicle states as the primary observation inputs, and trains an agent via a weather-robust perception module coupled with a risk-constrained decision module. This architecture allows the agent to learn adaptive driving strategies that effectively balance safety and efficiency, even in severe weather.
