@@ -1,5 +1,5 @@
 
- ## AMMAR (Autonomous Mobility & Multi-Agent Research)
+ ## 🚗 AMMAR (Autonomous Mobility & Multi-Agent Research)
 
 
 # HPN (Hierarchical Policy Network)
