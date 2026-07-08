@@ -1,6 +1,16 @@
 
  ## AMMAR (Autonomous Mobility & Multi-Agent Research)
 
+
+# HPN (Hierarchical Policy Network)
+HPN (Hierarchical Policy Network) is a novel hybrid autonomous driving architecture powered by digital twin simulation, designed to overcome the inherent tradeoffs between traditional modular pipelines and monolithic end-to-end driving models. It addresses long-tail rare corner cases in self-driving by splitting driving tasks into tiered expert primitive policies managed by a high-level Arbiter, balancing full safety verifiability, model interpretability, and high driving performance. This framework is validated on CARLA and mainstream autonomous driving digital twin simulators, supporting all common urban, highway, and emergency driving scenarios.
+
+details are orividede in :
+https://github.com/L221119/HHH123/blob/main/README.md
+
+
+
+
 # LaneAnchor
 source code https://github.com/18haventgirl/LaneAnchor
 
