@@ -12,6 +12,9 @@ a unified end-to-end continuous control framework for autonomous collision avoid
 
 
 
+
+
+
 # LaneAnchor
 LaneAnchor, an end-to-end imitation learning framework for autonomous lane following that unifies modality-aware cross-modal fusion, navigation-conditioned trajectory decoding, and auxiliary multi-task supervision within a single architecture. Extensive experiments on the \emph{Longest6} benchmark~\cite{chitta2022transfuser} demonstrate its competitive closed-loop performance against representative camera-only and camera-LiDAR fusion methods, while ablation studies further validate the effectiveness of each proposed component. 
 source code https://github.com/18haventgirl/LaneAnchor
