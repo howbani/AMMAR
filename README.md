@@ -1,42 +1,60 @@
+# HPN: Hierarchical Policy Network  
 
- ## 🚗 AMMAR (Autonomous Mobility & Multi-Agent Research)
+🚗 **Part of the AMMAR (Autonomous Mobility & Multi-Agent Research) project**
 
+HPN is a novel hybrid autonomous driving architecture powered by digital-twin simulation.  
+It bridges the gap between traditional modular pipelines and monolithic end-to-end models by decomposing driving tasks into **tiered expert primitive policies**, all coordinated by a high-level **Arbiter**.  
 
-# HPN (Hierarchical Policy Network)
-HPN (Hierarchical Policy Network) is a novel hybrid autonomous driving architecture powered by digital twin simulation, designed to overcome the inherent tradeoffs between traditional modular pipelines and monolithic end-to-end driving models. It addresses long-tail rare corner cases in self-driving by splitting driving tasks into tiered expert primitive policies managed by a high-level Arbiter, balancing full safety verifiability, model interpretability, and high driving performance. This framework is validated on CARLA and mainstream autonomous driving digital twin simulators, supporting all common urban, highway, and emergency driving scenarios. details are orividede in :
-https://github.com/L221119/HHH123/blob/main/README.md
+This design delivers **full safety verifiability**, **model interpretability**, and **high driving performance** while effectively handling long-tail, rare corner cases.  
+The framework is validated on CARLA and other mainstream autonomous driving digital-twin simulators, supporting urban, highway, and emergency scenarios.  
 
+> 📖 **Full architecture details:** [HPN Documentation](https://github.com/L221119/HHH123/blob/main/README.md)
 
-# LaneGuard (Braking and evasive steering)
-a unified end-to-end continuous control framework for autonomous collision avoidance steering that successfully balances aggressive obstacle evasion with mechanical stability, significantly outperforming standard DRL baselines in complex high-speed emergency scenarios.
+---
 
+## 🔧 Driving Primitives
 
+HPN orchestrates several specialised primitives, each targeting a core driving task:
 
+| Primitive | Task | Description |
+|-----------|------|-------------|
+| **LaneGuard** | Braking & evasive steering | A unified end-to-end continuous control framework for collision avoidance that balances aggressive obstacle evasion with mechanical stability. Outperforms standard DRL baselines in high‑speed emergency scenarios. |
+| **LaneAnchor** | Lane following | An end-to-end imitation learning framework that combines modality‑aware cross‑modal fusion, navigation‑conditioned trajectory decoding, and auxiliary multi‑task supervision. Achieves competitive closed‑loop performance on the *Longest6* benchmark. |
+| **CAL‑RAPPO** | Intersection handling | A vision‑based deep reinforcement learning agent for unsignalized intersections in adverse weather. Uses a weather‑robust perception module coupled with a risk‑constrained decision module to balance safety and efficiency. |
+| **IST‑SACF** | Car following | Visual RL for safe car‑following. Trained with frame stacking, image augmentation, experience replay, and contrastive learning to learn a stable time‑headway control policy. |
+| **CausalPark** | Parking | Causal‑aware dual‑stream end‑to‑end autonomous parking with multimodal trajectory generation. |
 
+### 📂 Source code
 
+- **LaneAnchor** → [github.com/18haventgirl/LaneAnchor](https://github.com/18haventgirl/LaneAnchor)  
+- **CAL‑RAPPO** → [github.com/L221119/CAL](https://github.com/L221119/CAL)  
+- **IST‑SACF** → [github.com/howbani/IST-SACF](https://github.com/howbani/IST-SACF)  
+- **CausalPark** → [github.com/howbani/CausalPark](https://github.com/howbani/CausalPark)  
+- *LaneGuard code will be released soon.*
 
-# LaneAnchor ( Lane Following)
-LaneAnchor, an end-to-end imitation learning framework for autonomous lane following that unifies modality-aware cross-modal fusion, navigation-conditioned trajectory decoding, and auxiliary multi-task supervision within a single architecture. Extensive experiments on the \emph{Longest6} benchmark~\cite{chitta2022transfuser} demonstrate its competitive closed-loop performance against representative camera-only and camera-LiDAR fusion methods, while ablation studies further validate the effectiveness of each proposed component. 
-source code https://github.com/18haventgirl/LaneAnchor
+---
 
+## ✨ Key Features
 
-# CAL-RAPPO ( Intersection Handeling)
-CAL-RAPPO is a vision-based deep reinforcement learning project built on the CARLA simulator, designed to enable autonomous driving at unsignalized intersections under adverse weather conditions. The project focuses on end-to-end decision-making in such challenging scenarios. It leverages forward-facing camera images and ego-vehicle states as the primary observation inputs, and trains an agent via a weather-robust perception module coupled with a risk-constrained decision module. This architecture allows the agent to learn adaptive driving strategies that effectively balance safety and efficiency, even in severe weather.
+- **Hybrid architecture** – combines modular safety with end‑to‑end flexibility  
+- **High‑level Arbiter** – selects the most appropriate expert primitive in real time  
+- **Full safety verifiability** – every primitive can be tested and validated independently  
+- **Model interpretability** – clear decision boundaries and fallback behaviours  
+- **Corner‑case robustness** – specifically designed to master rare, critical scenarios  
+- **CARLA & digital‑twin support** – ready to plug into popular simulation environments  
 
-source code: https://github.com/L221119/CAL)
+---
 
+## 🚀 Quick Start
 
-# IST_SACF ( Car Following) 
-IST_SACF is a CARLA-based visual reinforcement learning project for safe car-following. The project focuses on single-lane longitudinal car-following. It uses front-view camera images as the main observation input and trains an agent through frame stacking, image augmentation, experience replay, and a contrastive learning auxiliary objective, enabling the agent to learn a stable time-headway control policy while maintaining safety.
+### Prerequisites
 
- source code https://github.com/howbani/IST-SACF
+- [CARLA simulator](https://carla.org/) (0.9.x recommended)  
+- Python 3.7+  
+- PyTorch, NumPy, OpenCV, etc. (see individual primitive requirements)
 
+### Clone the repository
 
- # CausalPark (Parking)
-  CausalPark: Causal-Aware Dual-Stream End-to-End Autonomous Parking with Multimodal Trajectory Generation
-  
-  source code https://github.com/howbani/CausalPark
-
-
-
-
+```bash
+git clone https://github.com/L221119/HHH123.git
+cd HHH123
