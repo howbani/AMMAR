@@ -30,7 +30,7 @@ HPN orchestrates several specialised primitives, each targeting a core driving t
 - **CAL‑RAPPO** → [github.com/L221119/CAL](https://github.com/L221119/CAL)  
 - **IST‑SACF** → [github.com/howbani/IST-SACF](https://github.com/howbani/IST-SACF)  
 - **CausalPark** → [github.com/howbani/CausalPark](https://github.com/howbani/CausalPark)  
-- *LaneGuard code will be released soon.*
+- **LaneGuard**  → https://github.com/lyx3098399213-cloud/LaneGuard
 
 ---
 
