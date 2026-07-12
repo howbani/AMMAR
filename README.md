@@ -53,8 +53,3 @@ HPN orchestrates several specialised primitives, each targeting a core driving t
 - Python 3.7+  
 - PyTorch, NumPy, OpenCV, etc. (see individual primitive requirements)
 
-### Clone the repository
-
-```bash
-git clone https://github.com/L221119/HHH123.git
-cd HHH123
